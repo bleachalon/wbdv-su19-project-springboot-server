@@ -57,8 +57,7 @@ public class UserController {
       Cookie cookie = new Cookie("JSESSIONID", session.getId());
       cookie.setMaxAge(30 * 60);// set expire time to 30 mins
       cookie.setPath("/");
-      cookie.setSecure(true);
-      cookie.setDomain("");
+      cookie.setDomain("*");
       response.addCookie(cookie);
       ObjectMapper mapper = new ObjectMapper();
       ObjectNode root = mapper.createObjectNode();
