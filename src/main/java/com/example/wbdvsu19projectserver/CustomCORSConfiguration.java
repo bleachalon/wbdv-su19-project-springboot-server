@@ -17,6 +17,8 @@ public class CustomCORSConfiguration {
     CorsConfiguration corsConfiguration = new CorsConfiguration();
     corsConfiguration.setAllowCredentials(true); //kep point!! required
     corsConfiguration.addAllowedOrigin("*");
+    corsConfiguration.addAllowedOrigin("https://wbdev-su19-project-server.herokuapp.com/");
+    corsConfiguration.addExposedHeader("Set-Cookie");
     corsConfiguration.addAllowedHeader("*");
     corsConfiguration.addAllowedMethod("*");
     corsConfiguration.addExposedHeader("Content-Type");
